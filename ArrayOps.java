@@ -44,7 +44,36 @@ public class ArrayOps {
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
         // Write your code here:
-        return false;
+        int elementExists = 0;
+        if(array2.length >= array1.length){
+            for(int i = 0; i < array2.length; i++){
+                elementExists = 0;
+                for(int j = 0; j < array1.length; j++){
+                    if(array2[i] == array1[j]){
+                        elementExists = 1;
+                    }
+                }
+                if(elementExists != 1){
+                    return false;
+                }
+            }
+
+            return true;
+        }else{
+            for(int i = 0; i < array1.length; i++){
+                elementExists = 0;
+                for(int j = 0; j < array2.length; j++){
+                    if(array1[i] == array2[j]){
+                        elementExists = 1;
+                    }
+                }
+                if(elementExists != 1){
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 
     public static boolean isSorted(int [] array) {
