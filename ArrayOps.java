@@ -19,8 +19,19 @@ public class ArrayOps {
     }
 
     public static int secondMaxValue(int [] array) {
-        // Write your code here:
-        return 0;
+        int firstMax = 0;
+        int secondMax = 0;
+        for(int i = 0; i < array.length; i++){
+            if (array[i] >= firstMax) {
+                firstMax = array[i];
+            }
+        }
+        for(int i = 0; i < array.length; i++){
+            if ((array[i] >= secondMax) && (array[i] < firstMax)) {
+                secondMax = array[i];
+            }
+        }
+        return secondMax;
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
