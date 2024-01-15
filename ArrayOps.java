@@ -29,7 +29,7 @@ public class ArrayOps {
         }
         
         for(int i = 0; i < array.length; i++){
-            if(array[i] = firstMax){
+            if(array[i] == firstMax){
                 firstMaxCounter++;
             }
             if ((array[i] >= secondMax) && (array[i] < firstMax)) {
