@@ -25,19 +25,21 @@ public class ArrayOps {
         for(int i = 0; i < array.length; i++){
             if (array[i] >= firstMax) {
                 firstMax = array[i];
+            }
+        }
+        
+        for(int i = 0; i < array.length; i++){
+            if(array[i] = firstMax){
                 firstMaxCounter++;
             }
-        }
-        if(firstMaxCounter > 1){
-            return firstMax;
-        }else{
-            for(int i = 0; i < array.length; i++){
-                if ((array[i] >= secondMax) && (array[i] < firstMax)) {
-                    secondMax = array[i];
-                }
+            if ((array[i] >= secondMax) && (array[i] < firstMax)) {
+                secondMax = array[i];
             }
-            return secondMax;
+            if(firstMaxCounter > 1){
+                secondMax = firstMax;
+            }
         }
+        return secondMax;
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
