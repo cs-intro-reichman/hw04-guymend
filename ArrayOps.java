@@ -4,8 +4,18 @@ public class ArrayOps {
     }
     
     public static int findMissingInt (int [] array) {
-        // Write your code here:
-        return -1;
+        int maxInArray = 0;
+        int missingNumber = 0;
+        int[] exisitingNumbers = new int[array.length + 1];
+        for(int i = 0; i < array.length; i++){
+            exisitingNumbers[array[i]] = 1;
+        }
+        for(int j = 0; j < exisitingNumbers.length; j++){
+            if(exisitingNumbers[j] != 1){
+                missingNumber = j;
+            }
+        }
+        return missingNumber;
     }
 
     public static int secondMaxValue(int [] array) {
