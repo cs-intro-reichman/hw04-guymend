@@ -21,17 +21,23 @@ public class ArrayOps {
     public static int secondMaxValue(int [] array) {
         int firstMax = 0;
         int secondMax = 0;
+        int firstMaxCounter = 0;
         for(int i = 0; i < array.length; i++){
             if (array[i] >= firstMax) {
                 firstMax = array[i];
+                firstMaxCounter++;
             }
         }
-        for(int i = 0; i < array.length; i++){
-            if ((array[i] >= secondMax) && (array[i] < firstMax)) {
-                secondMax = array[i];
+        if(firstMaxCounter > 1){
+            return firstMax;
+        }else{
+            for(int i = 0; i < array.length; i++){
+                if ((array[i] >= secondMax) && (array[i] < firstMax)) {
+                    secondMax = array[i];
+                }
             }
+            return secondMax;
         }
-        return secondMax;
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
