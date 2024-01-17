@@ -116,7 +116,30 @@ public class StringOps {
     }
 
     public static int[] allIndexOf (String string, char chr) {
-        // Write your code here:
-        return new int[1];
+        int arrayLength = 0;
+        for(int i = 0; i < string.length(); i++){
+            Character letter =  string.charAt(i);
+            if(letter == chr){
+                arrayLength++;
+            }
+        }
+        int[] indexArray = new int[arrayLength];
+        for(int j = 0; j < arrayLength; j++){
+            for(int z = 0; z < string.length(); z++){
+                Character letter =  string.charAt(z);
+                if(letter == chr){
+                    indexArray[j] = z;
+                    if(z == 0){
+                        string = (char)(((int) letter) + 32) + string.substring(z+1,string.length());
+                    }else if ( z == string.length()){
+                        string = string.substring(0, z) + (char)(((int) letter) + 32);
+                    }else{
+                        string = string.substring(0, z) + (char)(((int) letter) + 32) + string.substring(z+1,string.length());
+                    }
+                    continue;
+                }
+            }
+        }
+        return indexArray;
     }
 }
