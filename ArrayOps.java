@@ -11,7 +11,7 @@ public class ArrayOps {
             exisitingNumbers[array[i]] = 1;
         }
         for(int j = 0; j < exisitingNumbers.length; j++){
-            if(exisitingNumbers[j] != 1){
+            if (exisitingNumbers[j] != 1) {
                 missingNumber = j;
             }
         }
@@ -29,13 +29,13 @@ public class ArrayOps {
         }
         
         for(int i = 0; i < array.length; i++){
-            if(array[i] == firstMax){
+            if (array[i] == firstMax) {
                 firstMaxCounter++;
             }
             if ((array[i] >= secondMax) && (array[i] < firstMax)) {
                 secondMax = array[i];
             }
-            if(firstMaxCounter > 1){
+            if (firstMaxCounter > 1) {
                 secondMax = firstMax;
             }
         }
@@ -45,15 +45,15 @@ public class ArrayOps {
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
         // Write your code here:
         int elementExists = 0;
-        if(array2.length >= array1.length){
+        if (array2.length >= array1.length) {
             for(int i = 0; i < array2.length; i++){
                 elementExists = 0;
                 for(int j = 0; j < array1.length; j++){
-                    if(array2[i] == array1[j]){
+                    if (array2[i] == array1[j]) {
                         elementExists = 1;
                     }
                 }
-                if(elementExists != 1){
+                if (elementExists != 1) {
                     return false;
                 }
             }
@@ -63,11 +63,11 @@ public class ArrayOps {
             for(int i = 0; i < array1.length; i++){
                 elementExists = 0;
                 for(int j = 0; j < array2.length; j++){
-                    if(array1[i] == array2[j]){
+                    if (array1[i] == array2[j]) {
                         elementExists = 1;
                     }
                 }
-                if(elementExists != 1){
+                if (elementExists != 1) {
                     return false;
                 }
             }
@@ -80,9 +80,9 @@ public class ArrayOps {
         boolean isIncreasing = false;
         boolean isDecreasing = false;
         for(int i = 0; i < array.length - 1; i++){
-            if(array[i + 1] > array[i]){
+            if (array[i + 1] > array[i]) {
                 isIncreasing = true;
-            }else if(array[i + 1] < array[i]){
+            }else if (array[i + 1] < array[i]) {
                 isDecreasing = true;
             }
             if (isIncreasing && isDecreasing) {
