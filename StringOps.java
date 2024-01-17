@@ -60,7 +60,11 @@ public class StringOps {
             Character letter =  string.charAt(i);
             
             if((int)(string.charAt(i)) == 32){
-                wordCounter++;
+                if(i != 0){
+                    if(string.charAt(i-1) != 32){
+                        wordCounter++;
+                    }
+                }
                 letterInWord = 0;
                 if(i == 0){
                     string = string.substring(i+1,string.length());
