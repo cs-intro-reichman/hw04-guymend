@@ -136,7 +136,7 @@ public class StringOps {
                     }else{
                         string = string.substring(0, z) + (char)(((int) letter) + 32) + string.substring(z+1,string.length());
                     }
-                    continue;
+                    break;
                 }
             }
         }
