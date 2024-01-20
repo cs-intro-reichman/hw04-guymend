@@ -7,6 +7,8 @@ public class ArrayOps {
         int maxInArray = 0;
         int missingNumber = 0;
         int[] exisitingNumbers = new int[array.length + 1];
+
+        // linoy feedback: please add comments before every loop to explain what you are going to do (in all the functions)
         for(int i = 0; i < array.length; i++){
             exisitingNumbers[array[i]] = 1;
         }
@@ -44,6 +46,8 @@ public class ArrayOps {
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
         // Write your code here:
+
+         // linoy feedback: it is duplicate code, use one function and call her twice instead of that...
         int elementExists = 0;
         if (array2.length >= array1.length) {
             for(int i = 0; i < array2.length; i++){
