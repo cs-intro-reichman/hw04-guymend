@@ -26,6 +26,8 @@ public class StringOps {
     }
 
     public static String capVowelsLowRest (String string) {
+
+         // linoy feedback: again duplicate code == Low score on the exam. please use one function and call her twice
         for(int i = 0; i < string.length(); i++){
             Character letter =  string.charAt(i);
             if ((((int) letter) > 64) && (((int) letter) < 91)) {
@@ -54,6 +56,8 @@ public class StringOps {
     }
 
     public static String camelCase (String string) {
+        // linoy feedback: duplicate code, this function is to complicated, try to minimize it with functions or comment for every condition and loop
+        
         int wordCounter = 0;
         int letterInWord = 0;
         for(int i = 0; i < string.length(); i++){
